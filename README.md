@@ -38,6 +38,8 @@ android {
 }
 ```
 
+<br />
+
 ### Key functions
 
 |Function|Description|
@@ -51,6 +53,8 @@ android {
 |Heart Rate Estimation| Estimate heart rate from facial color variations and head move-ments caused by heartbeat using Remote Photoplethysmography and Ballistocardiography. |
 |Heart Rate Variability Analysis| Extract 19 variables of heart rate variability reflecting autonomic nervous system activity from the accumulated heart rates. |
 |Engagement Recognition| Recognize engagement level from balance of autonomic nervous system by heart rate variability analysis. |
+
+<br />
 
 ### Try the sample app
 
@@ -130,6 +134,8 @@ The ESRC SDK requires system permissions. These permissions allow the ESRC SDK t
 The `CAMERA`, `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE` permissions are classified as `dangerous` and require users to grant them explicitly when an app is run for the first time on devices running Android 6.0 or higher.
 
 For more information about requesting app permissions, see  Android’s Request App Permissions [guide](https://developer.android.com/training/permissions/requesting.html).
+
+<br />
 
 ## Making your first recognition
 
