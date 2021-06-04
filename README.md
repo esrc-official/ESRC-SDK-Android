@@ -127,8 +127,8 @@ The ESRC SDK requires system permissions. These permissions allow the ESRC SDK t
 ```manifest
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name=”android.permission.READ_EXTERNAL_STORAGE” />
-<uses-permission android:name=”android.permission.WRITE_EXTERNAL_STORAGE” />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
 The `CAMERA`, `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE` permissions are classified as `dangerous` and require users to grant them explicitly when an app is run for the first time on devices running Android 6.0 or higher.
