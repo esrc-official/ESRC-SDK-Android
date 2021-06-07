@@ -69,7 +69,7 @@ This page provides a step-by-step guide that demonstrates how to build and confi
 
 ### Step 1: Download and install the third-party libraries (OpenCV, TensorFlow, RxJava)
 
-Installing the OpenCV is simple if you’re familiar with using external libraries or SDKs. First, download the OpenCV `project` files from our [GitHub repository](https://github.com/esrc-official/ESRC-SDK-Android/third-party).
+Installing the OpenCV is simple if you’re familiar with using external libraries or SDKs. First, download the OpenCV `project` files from our [repository](https://drive.google.com/drive/folders/1QLduUkf0q2Yg4LwTUrr7EpwENNlea_Ep?usp=sharing).
 
 Then, import the OpenCV `project` files as `opencv-3.4.11 module` in your app. Finally, add the following code to your module `build.gradle` file:
 ```gradle
