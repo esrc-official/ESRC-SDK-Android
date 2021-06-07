@@ -65,7 +65,7 @@ Our sample app has the core features of the ESRC SDK. Download the app from our 
 
 ## Install ESRC SDK
 
-This page provides a step-by-step guide that demonstrates how to build and configure an in-app face and bio-analysis using ESRC SDK. 
+This page provides a step-by-step guide that demonstrates how to build and configure an in-app face and bio-analysis using the ESRC SDK. 
 
 ### Step 1: Download and install the third-party libraries (OpenCV, TensorFlow, RxJava)
 
