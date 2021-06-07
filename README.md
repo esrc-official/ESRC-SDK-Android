@@ -38,6 +38,8 @@ android {
 }
 ```
 
+<br />
+
 ### Key functions
 
 |Function|Description|
@@ -52,6 +54,8 @@ android {
 |Heart Rate Variability Analysis| Extract 19 variables of heart rate variability reflecting autonomic nervous system activity from the accumulated heart rates. |
 |Engagement Recognition| Recognize engagement level from balance of autonomic nervous system by heart rate variability analysis. |
 
+<br />
+
 ### Try the sample app
 
 Our sample app has the core features of the ESRC SDK. Download the app from our [GitHub repository](https://github.com/esrc-official/ESRC-Android) to get an idea of what you can build with the actual SDK and start building in your project.
@@ -61,11 +65,11 @@ Our sample app has the core features of the ESRC SDK. Download the app from our 
 
 ## Install ESRC SDK
 
-Through our **ESRC SDK** for Android, you can efficiently integrate real-time recognition of facial expression, heart response and emotions into your mobile app. This and other pages in the Getting Started provide the ESRC SDK’s structure and installation steps, then goes through the preliminary steps of implementing the ESRC SDK in your own project.
+This page provides a step-by-step guide that demonstrates how to build and configure an in-app face and bio-analysis using the ESRC SDK. 
 
 ### Step 1: Download and install the third-party libraries (OpenCV, TensorFlow, RxJava)
 
-Installing the OpenCV is simple if you’re familiar with using external libraries or SDKs. First, download the OpenCV `project` files from our [GitHub repository](https://github.com/esrc-official/ESRC-SDK-Android/third-party).
+Installing the OpenCV is simple if you’re familiar with using external libraries or SDKs. First, download the OpenCV `project` files from our [Google repository](https://drive.google.com/drive/folders/1QLduUkf0q2Yg4LwTUrr7EpwENNlea_Ep?usp=sharing).
 
 Then, import the OpenCV `project` files as `opencv-3.4.11 module` in your app. Finally, add the following code to your module `build.gradle` file:
 ```gradle
@@ -123,13 +127,15 @@ The ESRC SDK requires system permissions. These permissions allow the ESRC SDK t
 ```manifest
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name=”android.permission.READ_EXTERNAL_STORAGE” />
-<uses-permission android:name=”android.permission.WRITE_EXTERNAL_STORAGE” />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
 The `CAMERA`, `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE` permissions are classified as `dangerous` and require users to grant them explicitly when an app is run for the first time on devices running Android 6.0 or higher.
 
 For more information about requesting app permissions, see  Android’s Request App Permissions [guide](https://developer.android.com/training/permissions/requesting.html).
+
+<br />
 
 ## Making your first recognition
 
@@ -157,7 +163,7 @@ ESRC.init(APP_ID, getApplicationContext(), new ESRCLicense.ESRCLicenseHandler() 
 
 > Note: The `ESRC.init()` method must be called once across your Android app. It is recommended to initialize the ESRC SDK in the `onCreate()` method of the Application instance.
 
-### Step 2: Bind the ESRC Fragment (Optional)
+### (Optional) Step 2: Bind the ESRC Fragment
 
 If you don't want to develop a layout that uses the camera, you can ues the ESRC Fragment provided from the ESRC SDK. Include the **container** to bind the ESRC Fragment in your layout `.xml` file. Please skip the Step 4: Feed the ESRC SDK. The ESRC Fragment will feed the image to our SDK itself.
 
@@ -216,7 +222,7 @@ ESRC.start(ENABLE_HRV, ENABLE_DRAW, new ESRC.ESRCHandler() {
 });
 ```
 
-### Step 4: Feed the ESRC SDK (Optional)
+### (Optional) Step 4: Feed the ESRC SDK
 
 Feed `OpenCV Mat` on the ESRC SDK. To the `feed()` method, pass the `Mat` image received using a camera in real-time. Please do it at 10 fps. You can skip this step if you follow Step 2: Bind the ESRC Fragment.
 
