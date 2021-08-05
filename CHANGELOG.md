@@ -14,9 +14,12 @@
 - Improve structure of the SDK.
 
 ### 2.1.0 (May 14, 2021)
-- Improve the SDK by asynchronizaiton processing.
+- Improve the SDK by asynchronous processing.
 - Develop algorithm of facial action unit analysis.
 - Add callback of heart rate variability analysis.
 
 ### 2.2.0 (June 03, 2021)
 - Add feed method.
+
+### 2.2.1 (August 05, 2021)
+- Solve issues for asynchronous processing.

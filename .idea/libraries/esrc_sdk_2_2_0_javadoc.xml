@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="esrc-sdk-2.2.0-javadoc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/com.esrc.sdk.android/2.2.0/esrc-sdk-2.2.0-javadoc.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
