@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="55517bea-01d3-4730-a219-17f005eb3c80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/com.esrc.sdk.android/2.2.2/esrc-sdk-2.2.2-javadoc.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com.esrc.sdk.android/2.2.2/esrc-sdk-2.2.2.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com.esrc.sdk.android/2.3.0/esrc-sdk-2.3.0-javadoc.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com.esrc.sdk.android/2.3.0/esrc-sdk-2.3.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1vWYqYriOCUxoZ28ICzuHJE9rxG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/com.esrc.sdk.android/2.2.3" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\0_ESRC_SDK\ESRC-SDK-Android\com.esrc.sdk.android\2.3.0" />
+      <recent name="D:\0_ESRC_SDK\ESRC-SDK-Android\com.esrc.sdk.android\2.2.3" />
+      <recent name="D:\0_ESRC_SDK\ESRC-SDK-Android\com.esrc.sdk.android\2.2.2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\0_ESRC_SDK\ESRC-SDK-Android\com.esrc.sdk.android\2.2.3" />
+      <recent name="D:\0_ESRC_SDK\ESRC-SDK-Android\com.esrc.sdk.android\2.2.2" />
+      <recent name="D:\0_ESRC_SDK\ESRC-SDK-Android\com.esrc.sdk.android\2.2.1" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\esrc\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55517bea-01d3-4730-a219-17f005eb3c80" name="Default Changelist" comment="" />
+      <created>1626679502908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626679502908</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update 2.2.1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 2.2.1." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="577" y="87" key="CommitChangelistDialog2" timestamp="1628070704841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="577" y="87" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1628070704841" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1628070560528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1628070560528" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1628070603123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1628070603123" />
+  </component>
+</project>
