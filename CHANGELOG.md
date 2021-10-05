@@ -23,3 +23,11 @@
 
 ### 2.2.1 (August 05, 2021)
 - Solve issues for asynchronous processing.
+
+### 2.2.2 (September 13, 2021)
+ - Solve issues for asynchronous processing for facial expression recognition.
+ - Improve algorithm of remote heart rate.
+ - Improve algorithm of heart rate variability analysis.
+ 
+### 2.3.0 (September 30, 2021)
+ - Improve algorithm of heart rate variability analysis.
