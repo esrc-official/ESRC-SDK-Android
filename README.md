@@ -44,6 +44,7 @@ android {
 
 |Function|Description|
 |---|---|
+|Measurement Environment Analysis| Analyze measurement environment including brightness. |
 |Face Detection| Detect a single face using a front camera on mobile. |
 |Facial Landmark Detection| Detect x and y coordinates of 68 facial landmarks in 2D space from the detected face. |
 |Facial Action Unit Analysis| Extract centroid, area, theta and R distance of each 39 facial action unit from the detected 68 facial landmarks based on Facial Action Coding System determined by Paul Ekman. |
@@ -116,7 +117,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation name: 'esrc-sdk-2.3.0', ext: 'aar'
+    implementation name: 'esrc-sdk-2.4.0', ext: 'aar'
 }
 ```
 
@@ -190,36 +191,44 @@ getSupportFragmentManager().beginTransaction()
 
 ### Step 3: Start the ESRC SDK
 
-Start the ESRC SDK to recognize your facial expression, heart response and emotion. To the `start()` method, pass the `ENABLE_HRV` and `ENABLE_DRAW` parameters for whether to analyze HRV and whether to visualize the face bounding box and the `ESRC.ESRCHandler` to handle the results. You should implement the callback method of `ESRC.ESRCHandler` interface. So, you can receive the results of face, facial landmark, head pose, attention, facial expression, heart rate, heart rate variability and engagement. Please refer to **[sample app](https://github.com/esrc-official/ESRC-Android)**.
+Start the ESRC SDK to recognize your facial expression, heart response and emotion. To the `start()` method, pass the `ESRCType.Property` to select analysis modules and the `ESRC.ESRCHandler` to handle the results. You should implement the callback method of `ESRC.ESRCHandler` interface. So, you can receive the results of face, facial landmark, head pose, attention, facial expression, heart rate, heart rate variability and engagement. Please refer to **[sample app](https://github.com/esrc-official/ESRC-Android)**.
 
 ```java
-ESRC.start(ENABLE_HRV, ENABLE_DRAW, new ESRC.ESRCHandler() {
-    @Override
-    public void onDetectedFace(ESRCTYPE.Face face, ESRCException e) {
-        if(e != null) {
-            // Handle error.
+ESRC.start(
+    new ESRCType.Property(
+        true,  // Whether visualize result or not. It is only valid If you bind the ESRC Fragment (i.e., Step 2).
+        true,  // Whether analyze measurement environment or not.
+        true,  // Whether detect face or not.
+        true,  // Whether estimate remote hr or not. If enableFace is false, it is also automatically set to false.
+        true),  // Whether analyze HRV not not. If enableFace or enableRemoteHR is false, it is also automatically set to false.
+    new ESRC.ESRCHandler() {
+        @Override
+        public void onDetectedFace(ESRCTYPE.Face face, ESRCException e) {
+            if(e != null) {
+                // Handle error.
+            }
+            
+        // The face is detected.
+            // Through the “face” parameter of the onDetectedFace() callback method,
+            // you can get the location of the face from the result object
+            // that ESRC Heart SDK has passed to the onDetectedFace().
+            …
         }
         
-	// The face is detected.
-        // Through the “face” parameter of the onDetectedFace() callback method,
-        // you can get the location of the face from the result object
-        // that ESRC SDK has passed to the onDetectedFace().
-        …
-    }
-    
-    // Please implement other callback method of ESRC.ESRCHandler interface.
-    @Override public void onNotDetectedFace( … ) { … }
-    @Override public void onDetectedFacialLandmark( … ) { … }
-    @Override public void onAnalyzedFacialActionUnit( … ) { … }
-    @Override public void onRecognizedFacialExpression( … ) { … }
-    @Override public void onEstimatedHeadPose( … ) { … }
-    @Override public void onRecognizedAttention( … ) { … }
-    @Override public void didChangedProgressRatioOnRemoteHR( … ) { … }
-    @Override public void onEstimatedRemoteHR( … ) { … }
-    @Override public void didChangedProgressRatioOnHRV( … ) { … }
-    @Override public void onAnalyzedHRV( … ) { … }
-    @Override public void onRecognizedEngagement( … ) { … }
-});
+        // Please implement other callback method of ESRC.ESRCHandler interface.
+        @Override public void onNotDetectedFace( … ) { … }
+        @Override public void onAnalyzedMeasureEnv( … ) { … }
+        @Override public void onDetectedFacialLandmark( … ) { … }
+        @Override public void onAnalyzedFacialActionUnit( … ) { … }
+        @Override public void onRecognizedFacialExpression( … ) { … }
+        @Override public void onEstimatedHeadPose( … ) { … }
+        @Override public void onRecognizedAttention( … ) { … }
+        @Override public void didChangedProgressRatioOnRemoteHR( … ) { … }
+        @Override public void onEstimatedRemoteHR( … ) { … }
+        @Override public void didChangedProgressRatioOnHRV( … ) { … }
+        @Override public void onAnalyzedHRV( … ) { … }
+        @Override public void onRecognizedEngagement( … ) { … }
+    });
 ```
 
 ### (Optional) Step 4: Feed the ESRC SDK

@@ -31,3 +31,8 @@
  
 ### 2.3.0 (September 30, 2021)
  - Improve algorithm of heart rate variability analysis.
+
+### 2.4.0 (November 01, 2021)
+ - Add callback of measurement environment analysis.
+ - Add class variable for confidence level to ESRCType.Face.
+ - Add property when the SDK is started.
