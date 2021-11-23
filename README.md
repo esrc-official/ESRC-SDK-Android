@@ -117,7 +117,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation name: 'esrc-sdk-2.4.0', ext: 'aar'
+    implementation name: 'esrc-sdk-2.4.2', ext: 'aar'
 }
 ```
 
@@ -199,8 +199,13 @@ ESRC.start(
         true,  // Whether visualize result or not. It is only valid If you bind the ESRC Fragment (i.e., Step 2).
         true,  // Whether analyze measurement environment or not.
         true,  // Whether detect face or not.
+        true,  // Whether detect facial landmark or not. If enableFace is false, it is also automatically set to false.
+        true,  // Whether analyze facial action unit or not. If enableFace or enableFacialLandmark is false, it is also automatically set to false.
+        true,  // Whether recognize facial expression or not. If enableFace is false, it is also automatically set to false.
         true,  // Whether estimate remote hr or not. If enableFace is false, it is also automatically set to false.
-        true),  // Whether analyze HRV not not. If enableFace or enableRemoteHR is false, it is also automatically set to false.
+        true,  // Whether analyze HRV not not. If enableFace or enableRemoteHR is false, it is also automatically set to false.
+        true,  // Whether recognize engagement or not. If enableRemoteHR and enableHRV are false, it is also automatically set to false.
+        ESRCType.FacialExpression.FACIAL_EXPRESSION_TYPE_ESRC);  // Type of facial expression recognition.
     new ESRC.ESRCHandler() {
         @Override
         public void onDetectedFace(ESRCTYPE.Face face, ESRCException e) {
