@@ -41,5 +41,6 @@
  - Change window size of HRV analysis as 180s.
 
 ### 2.4.2 (November 23, 2021)
+ - Change window size of HRV analysis as 60s.
  - Add type of facial expression recognition.
  - Add score of engagement.
