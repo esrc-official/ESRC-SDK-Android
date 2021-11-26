@@ -38,8 +38,6 @@ android {
 }
 ```
 
-<br />
-
 ### Key functions
 
 |Function|Description|
@@ -54,8 +52,6 @@ android {
 |Heart Rate Estimation| Estimate heart rate from facial color variations and head move-ments caused by heartbeat using Remote Photoplethysmography and Ballistocardiography. |
 |Heart Rate Variability Analysis| Extract 19 variables of heart rate variability reflecting autonomic nervous system activity from the accumulated heart rates. |
 |Engagement Recognition| Recognize engagement level from balance of autonomic nervous system by heart rate variability analysis. |
-
-<br />
 
 ### Try the sample app
 
