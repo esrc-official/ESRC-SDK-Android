@@ -63,6 +63,7 @@ Our sample app has the core features of the ESRC SDK. Download the app from our 
 
 > Note: The fastest way to see our ESRC SDK in action is to build your app on top of our sample app. Make sure to change the application ID of the sample app to your own.
 
+<br />
 
 ## Install ESRC SDK
 
