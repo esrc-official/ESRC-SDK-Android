@@ -44,3 +44,6 @@
  - Change window size of HRV analysis as 60s.
  - Add type of facial expression recognition.
  - Add score of engagement.
+
+### 2.4.3 (December 08, 2021)
+ - Improve procedure for validation of license key.

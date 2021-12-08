@@ -95,14 +95,18 @@ dependencies {
 First, copy the ESRC SDK `.aar` file to the `app/libs` folder in your app. Then, add the dependency to your module `build.gradle` file:
 
 ```gradle
-allprojects {
+android {
+    ...
     packagingOptions {
         pickFirst 'lib/arm64-v8a/*'
         pickFirst 'lib/armeabi-v7a/*'
         pickFirst 'lib/x86/*'
         pickFirst 'lib/x86_64/*'
     }
+}
 
+allprojects {
+    ...    
     repositories {
         ...
         flatDir { dirs 'libs' }
@@ -114,7 +118,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation name: 'esrc-sdk-2.4.2', ext: 'aar'
+    implementation name: 'esrc-sdk-2.4.3', ext: 'aar'
 }
 ```
 
