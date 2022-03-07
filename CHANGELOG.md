@@ -47,3 +47,8 @@
 
 ### 2.4.3 (December 08, 2021)
  - Improve procedure for validation of license key.
+
+### 2.4.4 (March 07, 2022)
+ - Change facial expression recognition to basic facial expression recognition.
+ - Add valence facial expression recognition.
+ - Add MEE index recognition.

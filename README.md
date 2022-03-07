@@ -46,10 +46,11 @@ android {
 |Face Detection| Detect a single face using a front camera on mobile. |
 |Facial Landmark Detection| Detect x and y coordinates of 68 facial landmarks in 2D space from the detected face. |
 |Facial Action Unit Analysis| Extract centroid, area, theta and R distance of each 39 facial action unit from the detected 68 facial landmarks based on Facial Action Coding System determined by Paul Ekman. |
-|Facial Expression Recognition| Recognize 7 facial expressions consist of neutral, happiness, sad-ness, surprise, anger, disgust and fear based on 6 basic emotions. |
+|Basic Facial Expression Recognition| Recognize 7 facial expressions consist of neutral, happiness, sadness, surprise, anger, disgust and fear based on 6 basic emotions. |
+|Valence Facial Expression Recognition| Recognize 3 facial expressions consist of neutral, positive and negative based on valence of two-dimensional emotion. |
 |Head Pose Estimation| `(Coming Soon)` Estimate x, y and z angles of head pose in 3D space from the detected facial landmarks. |
 |Attention Recognition| `(Coming Soon)` Recognize attention based on whether you are looking straight from head pose. |
-|Heart Rate Estimation| Estimate heart rate from facial color variations and head move-ments caused by heartbeat using Remote Photoplethysmography and Ballistocardiography. |
+|Heart Rate Estimation| Estimate heart rate from facial color variations and head movements caused by heartbeat using Remote Photoplethysmography and Ballistocardiography. |
 |Heart Rate Variability Analysis| Extract 19 variables of heart rate variability reflecting autonomic nervous system activity from the accumulated heart rates. |
 |Engagement Recognition| Recognize engagement level from balance of autonomic nervous system by heart rate variability analysis. |
 
@@ -118,7 +119,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation name: 'esrc-sdk-2.4.3', ext: 'aar'
+    implementation name: 'esrc-sdk-2.4.4', ext: 'aar'
 }
 ```
 
@@ -202,11 +203,12 @@ ESRC.start(
         true,  // Whether detect face or not.
         true,  // Whether detect facial landmark or not. If enableFace is false, it is also automatically set to false.
         true,  // Whether analyze facial action unit or not. If enableFace or enableFacialLandmark is false, it is also automatically set to false.
-        true,  // Whether recognize facial expression or not. If enableFace is false, it is also automatically set to false.
+        true,  // Whether recognize basic facial expression or not. If enableFace is false, it is also automatically set to false.
+        true,  // Whether recognize valence facial expression or not. If enableFace is false, it is also automatically set to false.
         true,  // Whether estimate remote hr or not. If enableFace is false, it is also automatically set to false.
         true,  // Whether analyze HRV not not. If enableFace or enableRemoteHR is false, it is also automatically set to false.
         true,  // Whether recognize engagement or not. If enableRemoteHR and enableHRV are false, it is also automatically set to false.
-        ESRCType.FacialExpression.FACIAL_EXPRESSION_TYPE_ESRC);  // Type of facial expression recognition.
+        true);  // Whether recognize MEE index or not.
     new ESRC.ESRCHandler() {
         @Override
         public void onDetectedFace(ESRCTYPE.Face face, ESRCException e) {
@@ -226,7 +228,8 @@ ESRC.start(
         @Override public void onAnalyzedMeasureEnv( … ) { … }
         @Override public void onDetectedFacialLandmark( … ) { … }
         @Override public void onAnalyzedFacialActionUnit( … ) { … }
-        @Override public void onRecognizedFacialExpression( … ) { … }
+        @Override public void onRecognizedBasicFacialExpression( … ) { … }
+        @Override public void onRecognizedValenceFacialExpression( … ) { … }
         @Override public void onEstimatedHeadPose( … ) { … }
         @Override public void onRecognizedAttention( … ) { … }
         @Override public void didChangedProgressRatioOnRemoteHR( … ) { … }
@@ -234,6 +237,7 @@ ESRC.start(
         @Override public void didChangedProgressRatioOnHRV( … ) { … }
         @Override public void onAnalyzedHRV( … ) { … }
         @Override public void onRecognizedEngagement( … ) { … }
+        @Override public void onRecognizedMEEIndex( … ) { … }
     });
 ```
 
