@@ -119,7 +119,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation name: 'esrc-sdk-2.4.4', ext: 'aar'
+    implementation name: 'esrc-sdk-2.4.5', ext: 'aar'
 }
 ```
 
