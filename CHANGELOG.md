@@ -59,3 +59,7 @@
  - Change some ESRCType class constant to class enum (basic facial expression, valence facial expression, and engagement).
  - Remove onNotDetectedFace callback method -> Add isDetect parameter in ESRCType.Face class.
  - Add identification parameter in all ESRCType class.
+
+### 2.5.2 (Agust 08, 2022)
+ - Add verbose parameter for printing information about ESRC progressing in ESRCProperty class.
+ - Add 'getDisplayRotation' and 'getImageRotation' functions in ESRC class.
