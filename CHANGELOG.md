@@ -63,3 +63,6 @@
 ### 2.5.2 (Agust 08, 2022)
  - Add verbose parameter for printing information about ESRC progressing in ESRCProperty class.
  - Add 'getDisplayRotation' and 'getImageRotation' functions in ESRC class.
+
+### 2.5.3 (September 06, 2022)
+ - Improve RPPG and HRV algorithm.
