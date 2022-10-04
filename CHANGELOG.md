@@ -66,3 +66,6 @@
 
 ### 2.5.3 (September 06, 2022)
  - Improve RPPG and HRV algorithm.
+
+### 2.5.4 (October 04, 2022)
+ - Improve facial action unit analysis.
